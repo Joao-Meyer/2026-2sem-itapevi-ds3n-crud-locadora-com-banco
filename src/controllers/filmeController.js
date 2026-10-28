@@ -2,7 +2,27 @@ const FilmeModel = require("../models/FilmeModel")
 
 const FilmeController = {
     async getAllFilmes(req, res) {
-        const filmes = await FilmeModel.getAllFilmes()
+        const filmes = await FilmeModel.findAll()
+
+        return res.json(filmes)
+    },
+
+    async getFilmeById(req, res) {
+        const { id } = req.params
+
+        const filme = await FilmeModel.findById(id)
+
+        return res.json(filme)
+    },
+
+    async getFilmesByFiltro(req, res) {
+        const { titulo, diretor, genero } = req.query
+
+        const filmes = await FilmeModel.search({
+            titulo,
+            genero,
+            diretor
+        })
 
         return res.json(filmes)
     },

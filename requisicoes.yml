@@ -2,14 +2,14 @@ type: collection.insomnia.rest/5.0
 schema_version: "5.1"
 name: Scratch Pad
 meta:
-  id: wrk_scratchpad
-  created: 1764769685260
-  modified: 1764769685260
+  id: wrk_77a5e0984ed946228e65bde884e9a2fc
+  created: 1793140985449
+  modified: 1793140985449
   description: ""
 collection:
   - name: Testes
     meta:
-      id: fld_9de7f8f743a741c4bd00acf3634b1a88
+      id: fld_e6d12faf0e0f4021a00f669496364253
       created: 1790123529404
       modified: 1790123632496
       sortKey: -1790123529404
@@ -18,7 +18,7 @@ collection:
       - url: localhost:3000/
         name: Teste API
         meta:
-          id: req_38b2b8566ad94ddb81a13276c5f8a964
+          id: req_f3d8176d9b3e45ec943c5b9f51e16ed1
           created: 1788302256555
           modified: 1790123758391
           isPrivate: false
@@ -41,7 +41,7 @@ collection:
       - url: localhost:3000/test
         name: Teste conexão banco
         meta:
-          id: req_bc75de2e34ee4680aa6bcbd51b53e195
+          id: req_1e543e6b0846485d9d0f33ac327c20b5
           created: 1788303349206
           modified: 1790123641535
           isPrivate: false
@@ -64,7 +64,7 @@ collection:
       - url: localhost:3000/test/tables
         name: Teste listar tabelas banco
         meta:
-          id: req_ed86a7cb244543fea56ec2e82d280bcb
+          id: req_c32f161da4a94e9a80fbfdae2401b196
           created: 1788908475528
           modified: 1790123537297
           isPrivate: false
@@ -86,7 +86,7 @@ collection:
           rebuildPath: true
   - name: Generos
     meta:
-      id: fld_aa6ebdae8f7a4a4d8c72f681dc1439b9
+      id: fld_278cf49edd0845c3b968ab35ae9b5b7b
       created: 1790123573941
       modified: 1790123579876
       sortKey: -1788302256255
@@ -95,9 +95,9 @@ collection:
       - url: localhost:3000/generos
         name: Cria genero
         meta:
-          id: req_4728d845193b433d8c14bd2009b53131
+          id: req_c1f5b997929749b496dec52b34059a7e
           created: 1790123486658
-          modified: 1791931628708
+          modified: 1793141329277
           isPrivate: false
           description: ""
           sortKey: -1790123714780
@@ -122,7 +122,7 @@ collection:
       - url: localhost:3000/generos
         name: Lista todos generos
         meta:
-          id: req_8d2cb2057d724914a025ae9fd374414a
+          id: req_69077b0ff9cd4055b06c406da25f4d06
           created: 1791931804513
           modified: 1791931855689
           isPrivate: false
@@ -139,7 +139,7 @@ collection:
           rebuildPath: true
   - name: Filmes
     meta:
-      id: fld_2e0484cd09544344a017f8a611bb32d6
+      id: fld_f96d972bb70d4815b14f6403fd907d91
       created: 1791933216967
       modified: 1791933216967
       sortKey: -1788302256205
@@ -148,9 +148,9 @@ collection:
       - url: localhost:3000/filmes
         name: Cria filme
         meta:
-          id: req_68e61867864b44cfb90aaf60fb1f43e5
+          id: req_02e49a7d134c4f95b7f435f6813d45d0
           created: 1791933216967
-          modified: 1791939759507
+          modified: 1793150553081
           isPrivate: false
           description: ""
           sortKey: -1790123714780
@@ -159,7 +159,7 @@ collection:
           mimeType: application/json
           text: |-
             {
-            	"titulo": "hora do rush",
+            	"titulo": "vovozona",
             	"diretorId": 1,
             	"generos": [
             		1
@@ -176,12 +176,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: localhost:3000/generos
+      - url: localhost:3000/filmes
         name: Lista todos filmes
         meta:
-          id: req_8ab61bd5130a4c2ea885730171057472
+          id: req_20b975facef44731bf98c23b628ddbe2
           created: 1791933216967
-          modified: 1791933235748
+          modified: 1793142565062
           isPrivate: false
           description: ""
           sortKey: -1790123623790
@@ -194,18 +194,85 @@ collection:
             send: true
             store: true
           rebuildPath: true
+      - url: localhost:3000/filmes/5
+        name: Lista filme por id
+        meta:
+          id: req_8414c6e0fc8f4f49b4fd75a42b02a6c7
+          created: 1793146762408
+          modified: 1793150480129
+          isPrivate: false
+          description: ""
+          sortKey: -1790123578295
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:3000/filmes/search
+        name: Listas filmes por filtro
+        meta:
+          id: req_29678a816fb34260acb890ce17366cdd
+          created: 1793150493884
+          modified: 1793150638692
+          isPrivate: false
+          description: ""
+          sortKey: -1790123555547.5
+        method: GET
+        parameters:
+          - name: titulo
+            value: hor
+            description: ""
+            disabled: true
+          - name: diretor
+            value: "1"
+            description: ""
+            disabled: true
+          - name: genero
+            value: "1"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
   - name: Diretores
     meta:
-      id: fld_77202a20293548ee8b42f3dd47ddbc1a
+      id: fld_d8750e023fe94d3382daff7f8dc02ead
       created: 1791939723102
       modified: 1791939723102
       sortKey: -1788302256230
       description: ""
     children:
       - url: localhost:3000/diretores
+        name: Lista todos diretores
+        meta:
+          id: req_53fa95b81c854fb2951d96bb4fb4789c
+          created: 1791939723102
+          modified: 1791939826132
+          isPrivate: false
+          description: ""
+          sortKey: -1790123623790
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:3000/diretores
         name: Cria diretor
         meta:
-          id: req_280df80d5c724640a6234b98a6b22edc
+          id: req_cd93f9af67f64c25a5931bb2583010c9
           created: 1791939723102
           modified: 1791939787065
           isPrivate: false
@@ -229,34 +296,16 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: localhost:3000/diretores
-        name: Lista todos diretores
-        meta:
-          id: req_73a300bf1660468487a062541b0bd180
-          created: 1791939723102
-          modified: 1791939826132
-          isPrivate: false
-          description: ""
-          sortKey: -1790123623790
-        method: GET
-        settings:
-          renderRequestBody: true
-          encodeUrl: true
-          followRedirects: global
-          cookies:
-            send: true
-            store: true
-          rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
-    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    id: jar_b3df78715d24492a95ec5f924ef358a0
     created: 1791930998216
     modified: 1791930998216
 environments:
   name: Base Environment
   meta:
-    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    id: env_8dd4bfb4b5d146d19e67a564adfb4be4
     created: 1791930998213
     modified: 1791930998213
     isPrivate: false
